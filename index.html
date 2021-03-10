@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="thesimg" />
+
+  <title>thesimg</title>
+
+  <link id="favicon" rel="icon"
+    href="https://raw.githubusercontent.com/thesimg/thesimg.github.io/029453f18e89cb01d9967d175736a771211fe77c/logo-no-background.png"
+    type="image/x-icon" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <a href="#thumbnail">
+      <img
+        src="https://raw.githubusercontent.com/thesimg/thesimg.github.io/029453f18e89cb01d9967d175736a771211fe77c/logo-no-background.png"
+        id="headerLogo">
+    </a>
+    <a href="#thumbnail">
+      <div class="textGrad">&lt;/thesimg&gt;</div>
+    </a>
+    <div id="header-right" class="textGrad">
+      <div id="textGrad">
+        <a class="textGrad" href="#about">About</a>
+        <a class="textGrad" href="#projects">My Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="thumbnail">
+    <div id="thumbBack"></div>
+    <div id="thumbText" class="textGrad">&lt;/thesimg&gt;</div>
+    <div id="thumbSubText" class="textGrad">technological evolution</div>
+    <div class="fade"></div>
+    <div id="scrollDown" class="scrollButton"><a href="#bodyText"><span></span>See More</a></div>
+  </div>
+
+
+
+
+  <div id="bodyText">
+    <div id="about">
+      <br>
+      <div class="textGrad bodyTitle">About Me</div>
+
+      <div class="centeredText">
+        <div class="textGrad bodySubtitle">Programming</div>
+        <strong>JavaScript</strong><br>
+        Processing.js<br>
+        P5.js<br>
+        Node.js<br>
+        Discord.js<br><br>
+
+        <strong>HTML & CSS</strong><br>
+        Express<br><br><br><br>
+        
+        <div class="textGrad bodySubtitle" style="font-style: italic;">FIRST</div>
+        <strong>2015 - Trash Trek (FLL)</strong><br>
+        Local Qualifiers<br><br>
+
+        <strong>2016 - Animal Allies (FLL)</strong><br>
+        Local Qualifiers<br><br>
+        <strong>2017 - Hydro Dynamics (FLL)</strong><br>
+        Local Qualifiers Champion<br>
+        Regionals Gracious Professionalism Award<br><br>
+
+        <strong>2018 - Into Orbit (FLL)</strong><br>
+        Local Qualifiers Champion<br>
+        Regionals Champion<br>
+        First World Championships Detroit 2019<br><br>
+
+        <strong>2019 - City Shaper (FLL)</strong><br>
+        Local Qualifiers Champion<br>
+        Regionals Champion<br>
+        First World Championships Detroit 2020 [Cancelled due to COVID]<br><br>
+
+        <strong>2020 - Ultimate Goal (FTC)</strong><br>
+        [Season Ongoing]<br>
+      </div>
+    </div>
+
+    <div id="projects">
+      <br>
+      <div class="textGrad bodyTitle" class="textGrad">My Projects</div>
+      <div class="textGrad bodySubtitle" style="font-style: italic;">Coming Soon</div>
+      <!--<div class="project">
+        <img src="">
+        <div class="details"></div>
+        <div class="links">
+          <a href="https://www.khanacademy.org/computer-programming/-/5527920265625600">Visit</a>
+        </div>
+      </div>-->
+    </div>
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        document.getElementById("header").style.top = "0";
+      } else {
+        document.getElementById("header").style.top = "-50px";
+      }
+    }
+  </script>
+  <script>
+    let $root = $('html, body');
+    $('a[href^="#"]').click(function () {
+      let href = $.attr(this, 'href');
+      $root.animate({
+        scrollTop: $(href).offset().top
+      }, 500, function () {
+        window.location.hash = href;
+      });
+      return false;
+    });
+  </script>
+</body>
+
+</html>
