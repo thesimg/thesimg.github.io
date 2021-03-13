@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="thesimg" />
 
-  <title>&lt;/thesimg&gt;</title>
+  <title>thesimg</title>
 
   <link id="favicon" rel="icon"
-    href="https://raw.githubusercontent.com/thesimg/thesimg.github.io/master/logo-no-background.png"
+    href="./logo-no-background.png"
     type="image/x-icon" />
   <link rel="stylesheet" href="/style.css" />
   <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
@@ -18,18 +18,18 @@
 
 <body>
   <div id="header">
-    <a href="#thumbnail">
+    <a onclick="document.getElementById('thumbnail').scrollIntoView({ behavior: 'smooth'});">
       <img
-        src="https://raw.githubusercontent.com/thesimg/thesimg.github.io/master/logo-no-background.png"
+        src="./logo-no-background.png"
         id="headerLogo">
     </a>
-    <a href="#thumbnail">
+    <a onclick="document.getElementById('thumbnail').scrollIntoView({ behavior: 'smooth'});">
       <div class="textGrad">&lt;/thesimg&gt;</div>
     </a>
     <div id="header-right" class="textGrad">
       <div id="textGrad">
-        <a class="textGrad" href="#about">About</a>
-        <a class="textGrad" href="#projects">My Projects</a>
+        <a class="textGrad" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth'});">About</a>
+        <a class="textGrad" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth'});">Projects</a>
       </div>
     </div>
   </div>
@@ -37,9 +37,9 @@
   <div id="thumbnail">
     <div id="thumbBack"></div>
     <div id="thumbText" class="textGrad">&lt;/thesimg&gt;</div>
-    <div id="thumbSubText" class="textGrad">technological evolution</div>
+    <div id="thumbSubText" class="textGrad">i do stuff</div>
     <div class="fade"></div>
-    <div id="scrollDown" class="scrollButton"><a href="#bodyText"><span></span>See More</a></div>
+    <div id="scrollDown" class="scrollButton"><a onclick="document.getElementById('bodyText').scrollIntoView({ behavior: 'smooth'});"><span></span>See More</a></div>
   </div>
 
 
@@ -94,7 +94,7 @@
         <img src="">
         <div class="details"></div>
         <div class="links">
-          <a href="https://www.khanacademy.org/computer-programming/-/5527920265625600">Visit</a>
+          <a href="">Visit</a>
         </div>
       </div>-->
     </div>
