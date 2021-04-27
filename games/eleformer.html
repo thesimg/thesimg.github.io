@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="thesimg" />
+
+  <title>thesimg</title>
+
+  <link id="favicon" rel="icon" href="./logo-no-background.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <a href=../index.html> <img src="../logo-no-background.png" id="headerLogo">
+    </a>
+    <a href=./games.html> <div class="textGrad">&lt;/thesimg&gt; games</div>
+  </a>
+  </div>
+
+  <div id="bodyTextFull">
+    <div id="about">
+      <br>
+      <div class="textGrad bodyTitle">Eleformer</div><br>
+      <div class="textGrad bodySubtitle">A platformer where you collect elements and create substances</div>
+      <div class="centeredText">Should any loading problems arise, refresh the page. <br><br><strong>KNOWN BUG: after combining one element, th eother elements do not collide.</strong><br><br>
+        Use the arrow keys to jump around<br><br>
+        Collect elements and scroll through them using A and D<br><br>
+        Drop the elements using SPACE<br><br>
+        Combine the elements to make as many substances as you can<br><br>
+        Press R to make a new level<br><br>
+        This is based on the sticky platformer feature demo.<br><br>
+        I made this game for a science project about the periodic table, it was made in five days.<br><br>
+        <br> Elements you can Collect:
+        <br> Oxygen
+        <br> Hydrogen
+        <br> Carbon
+        <br> Sodium
+        <br> Potassium
+        <br> Chlorine
+        <br> Calcium
+        <br> Aluminium
+        <br> 
+        <br> Substances you can make:
+        <br> Table Salt - Na Cl
+        <br> Water - H2 O
+        <br> Baking Soda - Na H C O3
+        <br> Bleach - Na Cl O
+        <br> Cream of Tartar - K C4 H5 O6
+        <br> Flour - C6 H10 O5
+        <br> Eggshell - Ca C O3
+        <br> Drain Cleaner - Na O H
+        <br> Aluminum Foil - Al2 O3
+        <br> Carbon Dioxide - C O2
+      </div><br>
+      <div class="centeredText">
+        <script
+          src="https://www.khanacademy.org/computer-programming/eleformer-embed/6197266271387648/embed.js?editor=no&buttons=no&author=no&embed=yes">
+        </script>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script>
+    document.getElementById("header").style.top = "0";
+  </script>
+  <script>
+    let $root = $('html, body');
+    $('a[href^="#"]').click(function () {
+      let href = $.attr(this, 'href');
+      $root.animate({
+        scrollTop: $(href).offset().top
+      }, 500, function () {
+        window.location.hash = href;
+      });
+      return false;
+    });
+  </script>
+</body>
+
+</html>

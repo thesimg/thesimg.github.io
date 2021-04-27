@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="thesimg" />
+
+  <title>thesimg</title>
+
+  <link id="favicon" rel="icon" href="./logo-no-background.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <a href=../index.html> <img src="../logo-no-background.png" id="headerLogo">
+    </a>
+    <a href=./games.html> <div class="textGrad">&lt;/thesimg&gt; games</div>
+  </a>
+  </div>
+  
+  <div id="bodyTextFull">
+    <div id="about">
+      <br>
+      <div class="textGrad bodyTitle">Sticky</div><br>
+      <div class="textGrad bodySubtitle">A demo of a platformer with unique sticky collisions</div>
+      <div class="centeredText">Should any loading problems arise, refresh the page.<br><br>
+        Use arrow keys or WASD to move.
+        <br><br>
+        This program is a demo for a sticky platformer game, it was never finished.
+        <br><br>
+        The collisions aren't always accurate, I didn't put in any time to keep it from being super buggy.
+      </div><br>
+      <div class="centeredText">
+        <script
+          src="https://www.khanacademy.org/computer-programming/sticky-embed/5595847906508800/embed.js?editor=no&buttons=no&author=no&embed=yes">
+        </script>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script>
+    document.getElementById("header").style.top = "0";
+  </script>
+  <script>
+    let $root = $('html, body');
+    $('a[href^="#"]').click(function () {
+      let href = $.attr(this, 'href');
+      $root.animate({
+        scrollTop: $(href).offset().top
+      }, 500, function () {
+        window.location.hash = href;
+      });
+      return false;
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="thesimg" />
+  <title>thesimg</title>
+  <link id="favicon" rel="icon" href="./logo-no-background.png" type="image/x-icon" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+</head>
+
+<body>
+  <div id="header">
+    <a href=../index.html> <img src="../logo-no-background.png" id="headerLogo">
+    </a>
+    <a onclick="document.getElementById('thumbnail').scrollIntoView({ behavior: 'smooth'});">
+      <div class="textGrad">&lt;/thesimg&gt; games</div>
+    </a>
+  </div>
+  <div id="thumbnail">
+    <div id="thumbBack"></div>
+    <div id="thumbText" class="textGrad">&lt;/thesimg&gt; games</div>
+    <div id="thumbSubText" class="textGrad">i make games</div>
+    <div class="fade"></div>
+    <div id="scrollDown" class="scrollButton">
+      <a onclick="document.getElementById('bodyText').scrollIntoView({ behavior: 'smooth'});">
+        <span></span>See More
+      </a>
+    </div>
+  </div>
+  <div id="bodyText">
+    <div id="about">
+      <br>
+      <div class="textGrad bodyTitle">Web Games</div>
+      <div class="centeredText">Should any loading problems arise, refresh the page.</div>
+      <br>
+    </div>
+    <div class="project">
+      <img src="https://www.khanacademy.org/computer-programming/lux-embed/5672623869476864/6458858871406592.png">
+      <div class="details">A procedurally generated platformer which follows a ghost moving through a dark cave, in
+        which you use your health to do actions.</div>
+      <div class="links">
+        <a href=./lux.html>Play </a> 
+      </div> 
+    </div> 
+    <div class="project">
+      <img src="https://www.khanacademy.org/computer-programming/unnamed-elf-embed/4622720187711488/4571440157245440.png">
+      <div class="details">An unfinished winter themed platformer</div>
+      <div class="links">
+        <a href=./winter-demo.html>Play </a> 
+      </div> 
+    </div> 
+    <div class="project">
+      <img src="https://www.khanacademy.org/computer-programming/sticky-embed/5595847906508800/6721747813351424.png">
+      <div class="details">A demo of a platformer with unique sticky collisions</div>
+      <div class="links">
+        <a href=./sticky.html>Play </a> 
+      </div> 
+    </div> 
+    <div class="project">
+      <img src="https://www.khanacademy.org/computer-programming/eleformer-embed/6197266271387648/4721249270841344.png">
+      <div class="details">A platformer where you collect elements and create substances</div>
+      <div class="links">
+        <a href=./eleformer.html>Play </a> 
+      </div> 
+    </div> 
+  </div> 
+  <script>
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+        document.getElementById("header").style.top = "0";
+      } else {
+       document.getElementById("header").style.top = "-50px";
+      }
+    }
+    </script>
+    <script>
+      let $root = $('html, body');
+      $('a[href^="#"]').click(function () {
+        let href = $.attr(this, 'href');
+        $root.animate({
+          scrollTop: $(href).offset().top
+        }, 500, function () {
+          window.location.hash = href;
+        });
+        return false;
+      });
+  </script>
+</body>
+</html>

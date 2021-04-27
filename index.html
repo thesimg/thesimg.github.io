@@ -9,9 +9,7 @@
 
   <title>thesimg</title>
 
-  <link id="favicon" rel="icon"
-    href="./logo-no-background.png"
-    type="image/x-icon" />
+  <link id="favicon" rel="icon" href="./logo-no-background.png" type="image/x-icon" />
   <link rel="stylesheet" href="/style.css" />
   <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 </head>
@@ -19,9 +17,7 @@
 <body>
   <div id="header">
     <a onclick="document.getElementById('thumbnail').scrollIntoView({ behavior: 'smooth'});">
-      <img
-        src="./logo-no-background.png"
-        id="headerLogo">
+      <img src="./logo-no-background.png" id="headerLogo">
     </a>
     <a onclick="document.getElementById('thumbnail').scrollIntoView({ behavior: 'smooth'});">
       <div class="textGrad">&lt;/thesimg&gt;</div>
@@ -29,7 +25,8 @@
     <div id="header-right" class="textGrad">
       <div id="textGrad">
         <a class="textGrad" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth'});">About</a>
-        <a class="textGrad" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth'});">My Projects</a>
+        <a class="textGrad"
+          onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth'});">Projects</a>
       </div>
     </div>
   </div>
@@ -39,7 +36,9 @@
     <div id="thumbText" class="textGrad">&lt;/thesimg&gt;</div>
     <div id="thumbSubText" class="textGrad">i do stuff</div>
     <div class="fade"></div>
-    <div id="scrollDown" class="scrollButton"><a onclick="document.getElementById('bodyText').scrollIntoView({ behavior: 'smooth'});"><span></span>See More</a></div>
+    <div id="scrollDown" class="scrollButton"><a
+        onclick="document.getElementById('bodyText').scrollIntoView({ behavior: 'smooth'});"><span></span>See More</a>
+    </div>
   </div>
 
 
@@ -60,7 +59,7 @@
 
         <strong>HTML & CSS</strong><br>
         Express<br><br><br><br>
-        
+
         <div class="textGrad bodySubtitle" style="font-style: italic;">FIRST</div>
         <strong>2015 - Trash Trek (FLL)</strong><br>
         Local Qualifiers<br><br>
@@ -82,6 +81,9 @@
         First World Championships Detroit 2020 [Cancelled due to COVID]<br><br>
 
         <strong>2020 - Ultimate Goal (FTC)</strong><br>
+        Qualifier One Control Award Third Place<br>
+        Qualifier One Collins Aerospace Innovate Award First Place<br>
+        5th place overall score <br>
         [Season Ongoing]<br>
       </div>
     </div>
@@ -89,42 +91,61 @@
     <div id="projects">
       <br>
       <div class="textGrad bodyTitle" class="textGrad">My Projects</div>
-      <div class="textGrad bodySubtitle" style="font-style: italic;">Coming Soon</div>
-      <!--<div class="project">
-        <img src="">
-        <div class="details"></div>
+
+
+      <div class="textGrad bodySubtitle" style="font-style: italic;">Games</div>
+      <div class="project">
+        <img src="https://www.khanacademy.org/computer-programming/lux-embed/5672623869476864/6458858871406592.png">
+        <div class="details">A collection of web games created using JavaScript</div>
         <div class="links">
-          <a href="">Visit</a>
-        </div>
-      </div>-->
+          <a href=/games/games.html>Visit </a> 
+        </div> 
+      </div> 
+      <div class="textGrad bodySubtitle" style="font-style: italic;">Astrum Machina</div>
+      <div class="project">
+            <img src="https://pbs.twimg.com/media/EzdLUC0WEAMDYyI?format=png&name=medium">
+            <div class="details">A bot that generates art using p5.js and then posts it to Twitter every 4 hours.</div>
+            <div class="links">
+              <a href="https://thesimg.github.io/astrum-machina">Visit</a><br>
+              <a href="https://twitter.com/astrummachina">Twitter</a><br>
+              <a href="https://www.instagram.com/astrummachina/">Instagram</a>
+            </div>
+          </div>
+      <!--<div class="project">
+            <img src="">
+            <div class="details"></div>
+            <div class="links">
+              <a href="">Visit</a>
+            </div>
+        </div>-->
+      </div>
     </div>
-  </div>
 
-  <script>
-    window.onscroll = function () {
-      scrollFunction()
-    };
+    <script>
+      window.onscroll = function () {
+        scrollFunction()
+      };
 
-    function scrollFunction() {
-      if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
-        document.getElementById("header").style.top = "0";
-      } else {
-        document.getElementById("header").style.top = "-50px";
+      function scrollFunction() {
+        if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+          document.getElementById("header").style.top = "0";
+        } else {
+          document.getElementById("header").style.top = "-50px";
+        }
       }
-    }
-  </script>
-  <script>
-    let $root = $('html, body');
-    $('a[href^="#"]').click(function () {
-      let href = $.attr(this, 'href');
-      $root.animate({
-        scrollTop: $(href).offset().top
-      }, 500, function () {
-        window.location.hash = href;
+    </script>
+    <script>
+      let $root = $('html, body');
+      $('a[href^="#"]').click(function () {
+        let href = $.attr(this, 'href');
+        $root.animate({
+          scrollTop: $(href).offset().top
+        }, 500, function () {
+          window.location.hash = href;
+        });
+        return false;
       });
-      return false;
-    });
-  </script>
+    </script>
 </body>
 
 </html>

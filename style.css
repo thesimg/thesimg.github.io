@@ -185,6 +185,14 @@ body {
   color: rgb(230, 230, 230);
 }
 
+#bodyTextFull {
+  top: 1vh;
+  font-family: 'Source Code Pro', monospace;
+  padding: 20px;
+  position: relative;
+  color: rgb(230, 230, 230);
+}
+
 .bodyTitle {
   text-align: center;
   font-family: 'Source Code Pro', monospace;
